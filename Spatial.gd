@@ -9,6 +9,7 @@ func _ready():
 	var interface = ARVRServer.find_interface("OpenVR")
 	if interface:
 		interface.initialize()
+		$Viewport.arvr = true
 
 	# make sure vsync is disabled or we'll be limited to 60fps
 		OS.vsync_enabled = false
